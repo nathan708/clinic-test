@@ -194,6 +194,7 @@ a {
           width: 90%;
           margin: 0 auto; 
           padding: 10px;
+          margin-bottom: 20px;
         }
 
 
@@ -240,6 +241,8 @@ a {
 
 
   .news-inner {
+
+
     
     .section-title {
       margin-bottom: 70px;
@@ -253,7 +256,7 @@ a {
       box-shadow: 0px 3px 6px #00000029;
 
       @include sp {
-        padding: 0 4%;
+        padding: 4%;
       }
 
 
@@ -357,7 +360,7 @@ a {
     justify-content: space-between;
 
     @include sp {
-      flex-direction: column;
+      // flex-direction: column;
     }
 
     .google-map{
@@ -383,6 +386,7 @@ a {
 
       &-logo {
         margin-bottom: 25px;
+        
         img {
           width: 263px;
           height: 73px;
