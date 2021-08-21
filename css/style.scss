@@ -1,0 +1,524 @@
+@charset "UTF-8";
+
+$sp: 768px; // スマホ
+
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #444444;
+}
+
+.wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 35px;
+  margin-bottom: 32px;
+  display: inline-block;
+  background: linear-gradient(transparent 70%,#99E5A5 0 );
+
+
+}
+
+
+
+
+#header {
+  height: 130px;
+  
+  .header-inner {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      display: inline-block;
+    }
+
+
+    .clinic-info {
+      .business-hour {
+        margin-bottom: 12px;
+      }
+
+      .tel-num {
+        margin-top: 7px;
+        text-align: right;
+
+        img {
+          width: 24px;
+          height: 25px;
+          vertical-align: -5px;
+        }
+        a {
+          color: #21A937;
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+#main-visual {
+  background: url(/images/fv.png);
+  height: 947px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 162px;
+  position: relative;
+
+  .main-visual-inner {
+    writing-mode: vertical-lr;
+    width: 80%;
+    margin: 0 auto;
+    padding: 133px 0;
+    text-align: left;
+    
+    &-lead {
+      font-size: 1.75rem;
+      font-weight: bold;
+      background-color: #fff;
+      padding: 18px 37px 65px;
+      margin-right: 80px;
+    }
+  }
+}
+
+// コンセプト
+#concept {
+  margin-bottom: 82px;
+
+  .concept-inner {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column-reverse;
+
+    }
+  }
+
+  .concept-text {
+
+    @include sp {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+
+      .section-title {
+
+        margin: 30px auto 30px auto;
+      }
+    }
+
+    .concept-description {
+      line-height: 38px;
+    }
+    .concept-img {
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// 治療内容
+
+#service {
+  background-color: #F5FCF8;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 82px;
+
+  .service-inner {
+    .section-title {
+      margin-bottom: 70px;
+    }
+    .service-comment {
+      margin-bottom: 34px;
+    }
+
+    .service-list {
+      display: flex;
+      justify-content: space-between;
+
+      @include sp {
+        flex-direction: column;
+      }
+
+
+      
+      &-box {
+        width: 32%;
+        max-height: 750px;
+        border: 2px solid #C9C9C9;
+        border-radius: 10px;
+        padding-top: 40px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        @include sp {
+          width: 90%;
+          margin: 0 auto; 
+          padding: 10px;
+        }
+
+
+
+        .service-list-text{
+
+            
+          .service-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 40px 0px 45px;
+
+            @include sp {
+              margin: 20px ;
+            }
+          }
+          .service-description {
+            padding: 0 31px;
+            line-height: 38px;
+            text-align: left;
+
+            @include sp {
+              line-height: 30px;
+              font-weight: bold;
+            }
+
+          }
+        }
+        img {
+          max-width: 187px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+
+// お知らせ
+#news {
+  background-color: #F5FCF8;
+  text-align: center;
+  padding-bottom: 112px;
+
+
+  .news-inner {
+    
+    .section-title {
+      margin-bottom: 70px;
+    }
+
+    .news-list {
+      background-color: #fff;
+      margin: 0 auto ;
+      border-radius: 30px;
+      padding: 46px 66px;
+      box-shadow: 0px 3px 6px #00000029;
+
+      @include sp {
+        padding: 0 4%;
+      }
+
+
+      &-box {
+        
+        dl {
+          display: flex;
+          align-items: center;
+          padding: 15px 0 ;
+          border-bottom: 2px solid #E7E7E7;
+
+          @include sp {
+            flex-direction: column;
+
+          }
+
+
+          dt {
+            width: 30%;
+
+            @include sp {
+              width: 80%;
+              text-align: left;
+              margin-bottom: 10px;
+            }
+
+            // 日にち
+            .news-list-box-date {
+              color: #21A937;
+              margin-right: 30px;
+              font-weight: bold;
+              display: inline;
+            }
+
+            // ジャンル
+            .news-list-box-genre {
+              width: 86px;
+              text-align: center;
+              display: inline;
+              
+              span{
+                color: #fff;
+                font-size: 0.75rem;
+                background-color: #444444;
+                line-height: 30px;
+                font-weight: bold;
+                padding: 10px 20px;
+
+                @include sp {
+                  padding: 5px 10px;
+                }
+              }
+            }
+          }
+            
+            // 内容
+
+          dd {
+            width: 70%;
+
+            @include sp {
+              width: 90%;
+            }
+
+            .news-list-box-content {
+              text-align: left;
+              margin-left: 30px;
+              line-height: 1.7rem;
+              font-weight: bold;
+              
+              @include sp {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+        
+      a {
+        text-align: right;
+        padding-bottom: 46px;
+
+        p {
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+// Googleマップ、診療時間等
+#information {
+  margin-top: 196px;
+  margin-bottom: 163px;
+
+
+
+  .information-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include sp {
+      flex-direction: column;
+    }
+
+    .google-map{
+      width: 48%;
+
+      @include sp {
+        display: none;
+      }
+
+      iframe {
+        width: 100%;
+      }
+
+    }
+    .information-list {
+      width: 48%;
+
+      @include sp {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      &-logo {
+        margin-bottom: 25px;
+        img {
+          width: 263px;
+          height: 73px;
+        }
+      }
+
+      &-address {
+        margin-bottom: 25px;
+        
+        &-text {
+          margin-bottom: 25px;
+        }
+
+        .google-map-sp {
+          display: none;
+
+          iframe {
+            @include sp {
+              width: 100%;
+              height: 200%;
+            }
+          }
+
+          @include sp {
+            display: inline-block;
+          }
+        }
+
+      }
+
+      &-tel-num {
+        margin-bottom: 25px;
+
+        margin-top: 7px;
+        text-align: left;
+
+        @include sp {
+          text-align: center;
+        }
+
+        img {
+          width: 24px;
+          height: 25px;
+          vertical-align: -5px;
+        }
+        a {
+          color: #21A937;
+          font-size: 24px;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+
+      .business-hours {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.9rem;
+        border-top: 2px solid #E7E7E7;
+        padding-top: 20px;
+
+        @include sp {
+          flex-direction: column;
+        }
+        
+        
+        &-title {
+
+          width: 85px;
+
+          line-height: 30px;
+        }
+        
+        &-day {
+          width: 50px;
+          padding: 0 25px;
+          line-height: 30px;
+          border-left: 2px solid #E7E7E7;
+          flex-direction: row;
+          
+          p {
+            display: inline;
+            background: linear-gradient(transparent 70%,#99E5A5 50% );
+            line-height: 30px;
+          }
+        
+
+
+
+        }
+        
+        &-open-halftime {
+          width: 130px;
+          line-height: 30px;
+        }
+        
+        &-open-second-halftime {
+          width: 130px;
+          line-height: 30px;
+        }
+        
+        
+      }
+      .day-off {
+        display: flex;
+        font-size: 0.9rem;
+        border-bottom: 2px solid #E7E7E7;
+        
+        
+        &-hours-title {
+          width: 85px;
+          margin-top: 20px;
+          line-height: 30px;
+        }
+        
+        &-hours-day {
+          line-height: 30px;
+          margin-top: 20px;
+          margin-bottom: 24px;
+
+
+          padding: 0 25px;
+          line-height: 30px;
+          border-left: 2px solid #E7E7E7;
+        }
+      }
+
+      #footer {
+        text-align: right;
+        .footer {
+          font-size: 0.7rem;
+          margin: 21.5px 0;
+
+
+        }
+      }
+    }
+  }
+}
+  
