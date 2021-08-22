@@ -88,6 +88,12 @@ a {
   position: relative;
 }
 
+@media (max-width: 564px) {
+  #main-visual {
+    background-position: 75%;
+  }
+}
+
 #main-visual .main-visual-inner {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -98,12 +104,29 @@ a {
   text-align: left;
 }
 
+@media (max-width: 564px) {
+  #main-visual .main-visual-inner {
+    padding-top: 17vh;
+    padding-bottom: 20px;
+  }
+}
+
 #main-visual .main-visual-inner-lead {
   font-size: 1.75rem;
   font-weight: bold;
   background-color: #fff;
   padding: 18px 37px 65px;
   margin-right: 80px;
+}
+
+@media (max-width: 564px) {
+  #main-visual .main-visual-inner-lead {
+    margin-right: 20px;
+  }
+}
+
+#main-visual .main-visual-inner-lead span {
+  color: #21A937;
 }
 
 #concept {
@@ -146,6 +169,10 @@ a {
 
 #concept .concept-text .concept-description {
   line-height: 38px;
+}
+
+#concept .concept-text .concept-img {
+  width: 50%;
 }
 
 #concept .concept-text .concept-img img {
@@ -461,20 +488,25 @@ a {
 }
 
 #information .information-inner .information-list .business-hours {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   font-size: 0.9rem;
   border-top: 2px solid #E7E7E7;
   padding-top: 20px;
 }
 
-@media (max-width: 768px) {
-  #information .information-inner .information-list .business-hours {
+#information .information-inner .information-list .business-hours dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 25px;
+  line-height: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 564px) {
+  #information .information-inner .information-list .business-hours dl {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -482,64 +514,88 @@ a {
   }
 }
 
-#information .information-inner .information-list .business-hours-title {
-  width: 85px;
-  line-height: 30px;
+#information .information-inner .information-list .business-hours dl dt {
+  width: 84px;
+  border-right: 2px solid #E7E7E7;
 }
 
-#information .information-inner .information-list .business-hours-day {
-  width: 50px;
-  padding: 0 25px;
-  line-height: 30px;
-  border-left: 2px solid #E7E7E7;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+@media (max-width: 564px) {
+  #information .information-inner .information-list .business-hours dl dt {
+    border-right: none;
+    margin: 0 auto;
+    text-decoration: underline;
+  }
 }
 
-#information .information-inner .information-list .business-hours-day p {
+#information .information-inner .information-list .business-hours dl dd {
+  padding-left: 22px;
+}
+
+@media (max-width: 564px) {
+  #information .information-inner .information-list .business-hours dl dd {
+    padding: 0;
+  }
+}
+
+#information .information-inner .information-list .business-hours dl dd p {
   display: inline;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(50%, #99E5A5));
   background: linear-gradient(transparent 70%, #99E5A5 50%);
   line-height: 30px;
 }
 
-#information .information-inner .information-list .business-hours-open-halftime {
-  width: 130px;
-  line-height: 30px;
-}
-
-#information .information-inner .information-list .business-hours-open-second-halftime {
-  width: 130px;
-  line-height: 30px;
-}
-
-#information .information-inner .information-list .day-off {
+#information .information-inner .information-list .day-off dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 25px;
+  line-height: 30px;
   font-size: 0.9rem;
+  margin-top: 20px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #E7E7E7;
 }
 
-#information .information-inner .information-list .day-off-hours-title {
-  width: 85px;
-  margin-top: 20px;
-  line-height: 30px;
+@media (max-width: 564px) {
+  #information .information-inner .information-list .day-off dl {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-#information .information-inner .information-list .day-off-hours-day {
-  line-height: 30px;
-  margin-top: 20px;
-  margin-bottom: 24px;
-  padding: 0 25px;
-  line-height: 30px;
-  border-left: 2px solid #E7E7E7;
+#information .information-inner .information-list .day-off dl dt {
+  width: 84px;
+  border-right: 2px solid #E7E7E7;
+}
+
+@media (max-width: 564px) {
+  #information .information-inner .information-list .day-off dl dt {
+    border-right: none;
+    margin: 0 auto;
+    text-decoration: underline;
+  }
+}
+
+#information .information-inner .information-list .day-off dl dd {
+  padding-left: 20px;
+}
+
+@media (max-width: 564px) {
+  #information .information-inner .information-list .day-off dl dd {
+    padding: 0;
+  }
 }
 
 #information .information-inner .information-list #footer {
   text-align: right;
+}
+
+@media (max-width: 564px) {
+  #information .information-inner .information-list #footer {
+    text-align: center;
+  }
 }
 
 #information .information-inner .information-list #footer .footer {
